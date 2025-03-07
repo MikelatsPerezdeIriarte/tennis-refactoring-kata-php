@@ -20,19 +20,11 @@ class TennisGame1 implements TennisGame
     {
         $score = "";
         if ($this->player1Score == $this->player2Score) {
-            switch ($this->player1Score) {
-                case 0:
+            $score = match ($this->player1Score) {
                     $score = "Love-All";
-                    break;
-                case 1:
                     $score = "Fifteen-All";
-                    break;
-                case 2:
                     $score = "Thirty-All";
-                    break;
-                default:
-                    $score = "Deuce";
-                    break;
+                    $score = "Deuce"
             }
         } elseif ($this->player1Score >= 4 || $this->player2Score >= 4) {
             $minusResult = $this->player1Score - $this->player2Score;
