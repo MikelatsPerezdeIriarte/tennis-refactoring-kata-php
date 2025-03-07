@@ -6,13 +6,9 @@ class TennisGame1 implements TennisGame
 {
     private int $player1Score = 0;
     private int $player2Score = 0;
-    private string $player1Name = '';
-    private string $player2Name = '';
 
-    public function __construct($player1Name, $player2Name)
+    public function __construct(private readonly string $player1Name, private readonly string $player2Name)
     {
-        $this->player1Name = $player1Name;
-        $this->player2Name = $player2Name;
     }
 
     public function wonPoint($playerName): void
