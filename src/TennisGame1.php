@@ -11,7 +11,7 @@ class TennisGame1 implements TennisGame
     {
     }
 
-    public function wonPoint($playerName): void
+    public function wonPoint(string $playerName): void
     {
         $this->player1Name == $playerName ? $this->player1Score++ : $this->player2Score++;
     }
