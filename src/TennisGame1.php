@@ -46,8 +46,8 @@ class TennisGame1 implements TennisGame
                 $score = "Win for player2";
             }
         } else {
-            for ($i = 1; $i < 3; $i++) {
-                if ($i == 1) {
+            for ($numPlayer = 1; $numPlayer < 3; $numPlayer++) {
+                if ($numPlayer == 1) {
                     $tempScore = $this->player1Score;
                 } else {
                     $score .= "-";
